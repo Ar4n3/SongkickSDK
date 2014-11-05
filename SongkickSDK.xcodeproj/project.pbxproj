@@ -6,7 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B324AF7518E2014600962783 /* UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B324AF7618E2014600962783 /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildPhases = (
+				B324AF7918E2019400962783 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalLib;
+			productName = UniversalLib;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		B3243CD719093C370047DC56 /* ELSKUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B3243CD619093C370047DC56 /* ELSKUserInfo.m */; };
 		B324AF5018E1FCC500962783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324AF4F18E1FCC500962783 /* Foundation.framework */; };
 		B324AF5518E1FCC500962783 /* SongkickSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B324AF5418E1FCC500962783 /* SongkickSDK.h */; };
 		B324AF5718E1FCC500962783 /* SongkickSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B324AF5618E1FCC500962783 /* SongkickSDK.m */; };
@@ -16,6 +31,12 @@
 		B324AF6418E1FCC500962783 /* libSongkickSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324AF4C18E1FCC500962783 /* libSongkickSDK.a */; };
 		B324AF6A18E1FCC500962783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B324AF6818E1FCC500962783 /* InfoPlist.strings */; };
 		B324AF6C18E1FCC500962783 /* SongkickSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B324AF6B18E1FCC500962783 /* SongkickSDKTests.m */; };
+		B33D1B1518FD72DC002560F3 /* mockNSURLSessionDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B33D1B1418FD72DC002560F3 /* mockNSURLSessionDownloadTask.m */; };
+		B33D1B1918FD9F02002560F3 /* ELSKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B33D1B1818FD9F02002560F3 /* ELSKArtist.m */; };
+		B33D1B1E18FDCF95002560F3 /* ELSKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B33D1B1D18FDCF95002560F3 /* ELSKEvent.m */; };
+		B355CE4A1908074F004E3D7A /* ELSKVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = B355CE491908074F004E3D7A /* ELSKVenue.m */; };
+		B355CE4F19082213004E3D7A /* ELSKLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B355CE4E19082213004E3D7A /* ELSKLocation.m */; };
+		B397224418F57B7000BF8016 /* ELSKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B397224318F57B7000BF8016 /* ELSKRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B3243CD519093C370047DC56 /* ELSKUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSKUserInfo.h; sourceTree = "<group>"; };
+		B3243CD619093C370047DC56 /* ELSKUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSKUserInfo.m; sourceTree = "<group>"; };
 		B324AF4C18E1FCC500962783 /* libSongkickSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSongkickSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B324AF4F18E1FCC500962783 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B324AF5318E1FCC500962783 /* SongkickSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SongkickSDK-Prefix.pch"; sourceTree = "<group>"; };
@@ -53,6 +76,18 @@
 		B324AF6718E1FCC500962783 /* SongkickSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SongkickSDKTests-Info.plist"; sourceTree = "<group>"; };
 		B324AF6918E1FCC500962783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B324AF6B18E1FCC500962783 /* SongkickSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongkickSDKTests.m; sourceTree = "<group>"; };
+		B33D1B1318FD72DC002560F3 /* mockNSURLSessionDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mockNSURLSessionDownloadTask.h; sourceTree = "<group>"; };
+		B33D1B1418FD72DC002560F3 /* mockNSURLSessionDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mockNSURLSessionDownloadTask.m; sourceTree = "<group>"; };
+		B33D1B1718FD9F02002560F3 /* ELSKArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSKArtist.h; sourceTree = "<group>"; };
+		B33D1B1818FD9F02002560F3 /* ELSKArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSKArtist.m; sourceTree = "<group>"; };
+		B33D1B1C18FDCF95002560F3 /* ELSKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSKEvent.h; sourceTree = "<group>"; };
+		B33D1B1D18FDCF95002560F3 /* ELSKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSKEvent.m; sourceTree = "<group>"; };
+		B355CE481908074F004E3D7A /* ELSKVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSKVenue.h; sourceTree = "<group>"; };
+		B355CE491908074F004E3D7A /* ELSKVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSKVenue.m; sourceTree = "<group>"; };
+		B355CE4D19082213004E3D7A /* ELSKLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSKLocation.h; sourceTree = "<group>"; };
+		B355CE4E19082213004E3D7A /* ELSKLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSKLocation.m; sourceTree = "<group>"; };
+		B397224218F57B7000BF8016 /* ELSKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSKRequest.h; sourceTree = "<group>"; };
+		B397224318F57B7000BF8016 /* ELSKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSKRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +113,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3243CD819093C3A0047DC56 /* ELSKUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B3243CD519093C370047DC56 /* ELSKUserInfo.h */,
+				B3243CD619093C370047DC56 /* ELSKUserInfo.m */,
+			);
+			name = ELSKUserInfo;
+			sourceTree = "<group>";
+		};
 		B324AF4318E1FCC500962783 = {
 			isa = PBXGroup;
 			children = (
+				B3243CD819093C3A0047DC56 /* ELSKUserInfo */,
+				B355CE5019082215004E3D7A /* ELSKLocation */,
+				B355CE4C1908075E004E3D7A /* ELSKVenue */,
+				B33D1B1B18FDCF85002560F3 /* ELSKEvent */,
+				B33D1B1A18FD9F0B002560F3 /* ELSKArtist */,
+				B397224118F57B4100BF8016 /* ELSKRequest */,
 				B324AF5118E1FCC500962783 /* SongkickSDK */,
 				B324AF6518E1FCC500962783 /* SongkickSDKTests */,
 				B324AF4E18E1FCC500962783 /* Frameworks */,
@@ -130,6 +180,8 @@
 			children = (
 				B324AF6B18E1FCC500962783 /* SongkickSDKTests.m */,
 				B324AF6618E1FCC500962783 /* Supporting Files */,
+				B33D1B1318FD72DC002560F3 /* mockNSURLSessionDownloadTask.h */,
+				B33D1B1418FD72DC002560F3 /* mockNSURLSessionDownloadTask.m */,
 			);
 			path = SongkickSDKTests;
 			sourceTree = "<group>";
@@ -141,6 +193,51 @@
 				B324AF6818E1FCC500962783 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B33D1B1A18FD9F0B002560F3 /* ELSKArtist */ = {
+			isa = PBXGroup;
+			children = (
+				B33D1B1718FD9F02002560F3 /* ELSKArtist.h */,
+				B33D1B1818FD9F02002560F3 /* ELSKArtist.m */,
+			);
+			name = ELSKArtist;
+			sourceTree = "<group>";
+		};
+		B33D1B1B18FDCF85002560F3 /* ELSKEvent */ = {
+			isa = PBXGroup;
+			children = (
+				B33D1B1C18FDCF95002560F3 /* ELSKEvent.h */,
+				B33D1B1D18FDCF95002560F3 /* ELSKEvent.m */,
+			);
+			name = ELSKEvent;
+			sourceTree = "<group>";
+		};
+		B355CE4C1908075E004E3D7A /* ELSKVenue */ = {
+			isa = PBXGroup;
+			children = (
+				B355CE481908074F004E3D7A /* ELSKVenue.h */,
+				B355CE491908074F004E3D7A /* ELSKVenue.m */,
+			);
+			name = ELSKVenue;
+			sourceTree = "<group>";
+		};
+		B355CE5019082215004E3D7A /* ELSKLocation */ = {
+			isa = PBXGroup;
+			children = (
+				B355CE4D19082213004E3D7A /* ELSKLocation.h */,
+				B355CE4E19082213004E3D7A /* ELSKLocation.m */,
+			);
+			name = ELSKLocation;
+			sourceTree = "<group>";
+		};
+		B397224118F57B4100BF8016 /* ELSKRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B397224218F57B7000BF8016 /* ELSKRequest.h */,
+				B397224318F57B7000BF8016 /* ELSKRequest.m */,
+			);
+			name = ELSKRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +301,7 @@
 			targets = (
 				B324AF4B18E1FCC500962783 /* SongkickSDK */,
 				B324AF5B18E1FCC500962783 /* SongkickSDKTests */,
+				B324AF7518E2014600962783 /* UniversalLib */,
 			);
 		};
 /* End PBXProject section */
@@ -219,12 +317,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B324AF7918E2019400962783 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B324AF4818E1FCC500962783 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B397224418F57B7000BF8016 /* ELSKRequest.m in Sources */,
+				B355CE4F19082213004E3D7A /* ELSKLocation.m in Sources */,
 				B324AF5718E1FCC500962783 /* SongkickSDK.m in Sources */,
+				B3243CD719093C370047DC56 /* ELSKUserInfo.m in Sources */,
+				B355CE4A1908074F004E3D7A /* ELSKVenue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33D1B1918FD9F02002560F3 /* ELSKArtist.m in Sources */,
+				B33D1B1518FD72DC002560F3 /* mockNSURLSessionDownloadTask.m in Sources */,
 				B324AF6C18E1FCC500962783 /* SongkickSDKTests.m in Sources */,
+				B33D1B1E18FDCF95002560F3 /* ELSKEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +507,20 @@
 			};
 			name = Release;
 		};
+		B324AF7718E2014600962783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B324AF7818E2014600962783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,6 +540,7 @@
 				B324AF7118E1FCC500962783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B324AF7218E1FCC500962783 /* Build configuration list for PBXNativeTarget "SongkickSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +549,16 @@
 				B324AF7418E1FCC500962783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B324AF7618E2014600962783 /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B324AF7718E2014600962783 /* Debug */,
+				B324AF7818E2014600962783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

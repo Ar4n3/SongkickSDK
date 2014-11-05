@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ELSKRequest.h"
 
 @interface SongkickSDK : NSObject
+
++ (NSString *)getStringFromDictionary:(NSDictionary *)parameters;
++ (NSString *)getSearchStringFromRequest:(int)requestFor;
 
 @end
