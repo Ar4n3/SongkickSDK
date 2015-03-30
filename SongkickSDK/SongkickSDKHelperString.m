@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Enara Lopez Otaegi. All rights reserved.
 //
 
-#import "SongkickSDK.h"
+#import "SongkickSDKHelperString.h"
 
 NSString *kArtistSearchString = @"search/artist.json?";
 NSString *kEventSearchString = @"events.json?";
@@ -19,6 +19,8 @@ NSString *kUserTrackingEventsSearchString = @"users/%@/events.json?";
 NSString *kUserTrackingArtistsSearchString = @"users/%@/artists/tracked.json?";
 NSString *kUserTrackingMutedArtistsSearchString = @"users/%@/artists/muted.json?";
 NSString *kUserTrackingMetroAreaSearchString = @"users/%@/metro_areas/tracked.json?";
+NSString *kUserGigographySearchString = @"users/%@/gigography.json?";
+NSString *kArtistsGigographySearchString = @"artists/%@/gigography.json?";
 NSString *kArtistIdParameter = @"artist_id";
 NSString *kUserParameter = @"username";
 NSString *kAPIURL = @"http://api.songkick.com/api/3.0/";
@@ -125,6 +127,16 @@ NSString *kAPIURL = @"http://api.songkick.com/api/3.0/";
             
         case ELSKUserTrackingMetroAreasRequest:
             searchString = [NSString stringWithFormat:@"%@%@", kAPIURL, kUserTrackingMetroAreaSearchString];
+            
+            break;
+            
+        case ELSKUserGigography:
+            searchString = [NSString stringWithFormat:@"%@%@", kAPIURL, kUserGigographySearchString];
+            
+            break;
+            
+        case ELSKArtistGigography:
+            searchString = [NSString stringWithFormat:@"%@%@", kAPIURL, kArtistsGigographySearchString];
             
             break;
             

@@ -17,9 +17,10 @@
 @property (nonatomic) NSDictionary *trackingArtists;
 @property (nonatomic) NSDictionary *trackingMutedArtists;
 @property (nonatomic) NSDictionary *trackingMetroAreas;
+@property (nonatomic) NSDictionary *userGigography;
 
 + (NSDictionary *)setUserCalendarWithDictionary:(NSDictionary *)dictionary andRequest:(int)request;
 + (NSDictionary *)setUserTrackingArtistsWithDictionary:(NSDictionary *)dictionary;
 + (NSDictionary *)setUserTrackingMetroAreaWithDictionary:(NSDictionary *)dictionary;
-
++ (NSDictionary *)setUserGigographyWithDictionary:(NSDictionary *)dictionary;
 @end

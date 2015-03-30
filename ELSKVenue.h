@@ -10,15 +10,15 @@
 
 @interface ELSKVenue : NSObject
 
-@property (nonatomic) NSString *idVenue;
+@property (nonatomic) NSNumber *idVenue;
 @property (nonatomic) NSString *displayName;
 @property (nonatomic) NSString *street;
 @property (nonatomic) NSString *zip;
 @property (nonatomic) NSURL *website;
-@property (nonatomic) NSString *description;
+@property (nonatomic) NSString *desc;
 @property (nonatomic) NSString *phone;
 @property (nonatomic) NSDictionary *metroArea;
-@property (nonatomic) NSString *capacity;
+@property (nonatomic) NSNumber *capacity;
 @property (nonatomic) NSDictionary *city;
 @property (nonatomic) NSURL *uri;
 @property (nonatomic) float lat;

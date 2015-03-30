@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSString *type;
 @property (nonatomic) NSString *status;
-@property (nonatomic) NSString *popularity;
+@property (nonatomic) NSNumber *popularity;
 @property (nonatomic) NSString *displayName;
 @property (nonatomic) NSString *ageRestriction;
 @property (nonatomic) NSDictionary *start;
@@ -20,11 +20,11 @@
 @property (nonatomic) NSDictionary *series;
 @property (nonatomic) NSDictionary *location;
 @property (nonatomic) NSURL *uri;
-@property (nonatomic) NSString *idEvent;
+@property (nonatomic) NSNumber *idEvent;
 @property (nonatomic) NSArray *performance;
 @property (nonatomic) NSDictionary *venue;
 
 + (NSDictionary *)setEventWithDictionary:(NSDictionary *)dictionary andRequest:(NSURL *)requestURL;
-+ (ELSKEvent *)initEventFromDictionary:(NSDictionary *)event;
+- (ELSKEvent *)initEventFromDictionary:(NSDictionary *)event;
 
 @end

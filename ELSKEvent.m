@@ -15,6 +15,7 @@
     
     NSObject *jsonObject = [[NSObject alloc]init];
     NSError *error = [[NSError alloc]init];
+    NSDictionary *results;
     if (dictionary == nil) {
         
         NSData *jsonData = [[NSData alloc]init];
@@ -22,43 +23,53 @@
         error = [[NSError alloc]init];
         jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         dictionary = (NSDictionary *)jsonObject;
+        NSDictionary *resultsPage = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"resultsPage"]];
         
+        if ([[resultsPage objectForKey:@"status"] isEqualToString:@"ok"] && [resultsPage objectForKey:@"totalEntries"] > 0) {
+            
+            results = [NSDictionary dictionaryWithDictionary:[resultsPage objectForKey:@"results"]];
+        }
+        
+    } else {
+        results = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"results"]];
     }
             
-    NSDictionary *results = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"results"]];
-    NSMutableDictionary *eventsMutableDictionary = [[NSMutableDictionary alloc]init];
-    
-    for (NSDictionary *event in [results objectForKey:@"event"]) {
+    if (results) {
+        NSMutableDictionary *eventsMutableDictionary = [[NSMutableDictionary alloc]init];
         
-        ELSKEvent *eventObject = [[ELSKEvent alloc]init];
-        eventObject = [ELSKEvent initEventFromDictionary:event];
-        [eventsMutableDictionary setValue:eventObject forKey:eventObject.displayName];
+        for (NSDictionary *event in [results objectForKey:@"event"]) {
+            
+            ELSKEvent *eventObject = [[ELSKEvent alloc]initEventFromDictionary:event];
+            [eventsMutableDictionary setValue:eventObject forKey:eventObject.displayName];
+            
+        }
+        
+        NSDictionary *eventsDictionary = [NSDictionary dictionaryWithDictionary:eventsMutableDictionary];
+        return eventsDictionary;
         
     }
     
-    NSDictionary *eventsDictionary = [NSDictionary dictionaryWithDictionary:eventsMutableDictionary];
-    return eventsDictionary;
+    return nil;
     
 }
 
-+ (ELSKEvent *)initEventFromDictionary:(NSDictionary *)event {
-
-    ELSKEvent *eventObject = [[ELSKEvent alloc]init];
-    eventObject.type = [event objectForKey:@"type"];
-    eventObject.status = [event objectForKey:@"status"];
-    eventObject.popularity = [event objectForKey:@"popularity"];
-    eventObject.uri = [NSURL URLWithString:[event objectForKey:@"uri"]];
-    eventObject.displayName = [event objectForKey:@"displayName"];
-    eventObject.ageRestriction = [event objectForKey:@"ageRestriction"];
-    eventObject.start = [event objectForKey:@"start"];
-    eventObject.end = [event objectForKey:@"end"];
-    eventObject.series = [event objectForKey:@"series"];
-    eventObject.location = [event objectForKey:@"location"];
-    eventObject.idEvent = [event objectForKey:@"id"];
-    eventObject.performance = [event objectForKey:@"performance"];
-    eventObject.venue = [event objectForKey:@"venue"];
+- (ELSKEvent *)initEventFromDictionary:(NSDictionary *)event {
     
-    return eventObject;
+    self.type = [event objectForKey:@"type"];
+    self.status= [event objectForKey:@"status"];
+    self.popularity = [event objectForKey:@"popularity"];
+    self.uri = [NSURL URLWithString:[event objectForKey:@"uri"]];
+    self.displayName = [event objectForKey:@"displayName"];
+    self.ageRestriction = [event objectForKey:@"ageRestriction"];
+    self.start = [event objectForKey:@"start"];
+    self.end = [event objectForKey:@"end"];
+    self.series = [event objectForKey:@"series"];
+    self.location = [event objectForKey:@"location"];
+    self.idEvent = [event objectForKey:@"id"];
+    self.performance = [event objectForKey:@"performance"];
+    self.venue = [event objectForKey:@"venue"];
+    
+    return self;
     
 }
 

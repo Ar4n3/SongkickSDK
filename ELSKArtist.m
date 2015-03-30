@@ -13,17 +13,11 @@
 
 - (ELSKArtist *)initWithContentsOfDictionary:(NSDictionary *)dictionary {
         
-    NSDictionary *results = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"results"]];
-    
-    for (NSDictionary *artist in [results objectForKey:@"artist"]) {
-        
-        self.displayName = [artist objectForKey:@"displayName"];
-        self.idArtist = [artist objectForKey:@"id"];
-        self.identifier = [artist objectForKey:@"identifier"];
-        self.uri = [NSURL URLWithString:[artist objectForKey:@"uri"]];
-        self.onTourUntil = [artist objectForKey:@"onTourUntil"];
-        
-    }
+    self.displayName = [dictionary objectForKey:@"displayName"];
+    self.idArtist = [dictionary objectForKey:@"id"];
+    self.identifier = [dictionary objectForKey:@"identifier"];
+    self.uri = [NSURL URLWithString:[dictionary objectForKey:@"uri"]];
+    self.onTourUntil = [dictionary objectForKey:@"onTourUntil"];
     
     return self;
     

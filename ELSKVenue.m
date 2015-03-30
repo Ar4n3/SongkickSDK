@@ -10,27 +10,21 @@
 
 @implementation ELSKVenue
 - (ELSKVenue *)initWithContentsOfDictionary:(NSDictionary *)dictionary {
-        
-    NSDictionary *results = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"results"]];
     
-    for (NSDictionary *venue in [results objectForKey:@"venue"]) {
-        
-        self.displayName = [venue objectForKey:@"displayName"];
-        self.idVenue = [venue objectForKey:@"id"];
-        self.uri = [NSURL URLWithString:[venue objectForKey:@"uri"]];
-        self.street = [venue objectForKey:@"street"];
-        self.zip = [venue objectForKey:@"zip"];
-        self.website = [NSURL URLWithString:[venue objectForKey:@"website"]];
-        self.description = [venue objectForKey:@"description"];
-        self.phone = [venue objectForKey:@"phone"];
-        self.metroArea = [venue objectForKey:@"metroArea"];
-        self.capacity = [venue objectForKey:@"capacity"];
-        self.city = [venue objectForKey:@"city"];
-        self.uri = [NSURL URLWithString:[venue objectForKey:@"uri"]];
-        self.lat = [[venue objectForKey:@"lat"] floatValue];
-        self.lng = [[venue objectForKey:@"lng"] floatValue];
-        
-    }
+    self.displayName = [dictionary objectForKey:@"displayName"];
+    self.idVenue = [dictionary objectForKey:@"id"];
+    self.uri = [NSURL URLWithString:[dictionary objectForKey:@"uri"]];
+    self.street = [dictionary objectForKey:@"street"];
+    self.zip = [dictionary objectForKey:@"zip"];
+    self.website = [NSURL URLWithString:[dictionary objectForKey:@"website"]];
+    self.desc = [dictionary objectForKey:@"description"];
+    self.phone = [dictionary objectForKey:@"phone"];
+    self.metroArea = [dictionary objectForKey:@"metroArea"];
+    self.capacity = [dictionary objectForKey:@"capacity"];
+    self.city = [dictionary objectForKey:@"city"];
+    self.uri = [NSURL URLWithString:[dictionary objectForKey:@"uri"]];
+    self.lat = [[dictionary objectForKey:@"lat"] floatValue];
+    self.lng = [[dictionary objectForKey:@"lng"] floatValue];
     
     return self;
     

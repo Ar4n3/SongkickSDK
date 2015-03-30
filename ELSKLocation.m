@@ -10,15 +10,9 @@
 
 @implementation ELSKLocation
 - (ELSKLocation *)initWithContentsOfDictionary:(NSDictionary *)dictionary {
-        
-    NSDictionary *results = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"results"]];
     
-    for (NSDictionary *location in [results objectForKey:@"location"]) {
-        
-        self.metroArea = [location objectForKey:@"metroArea"];
-        self.city = [location objectForKey:@"city"];
-        
-    }
+    self.metroArea = [dictionary objectForKey:@"metroArea"];
+    self.city = [dictionary objectForKey:@"city"];
     
     return self;
     

@@ -11,7 +11,7 @@
 @interface ELSKArtist : NSObject
 
 @property (nonatomic) NSString *displayName;
-@property (nonatomic) NSString *idArtist;
+@property (nonatomic) NSNumber *idArtist;
 @property (nonatomic) NSURL *uri;
 @property (nonatomic) NSString *onTourUntil;
 @property (nonatomic) NSArray *identifier;

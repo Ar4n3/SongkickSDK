@@ -9,6 +9,8 @@
 #import "ELSKUserInfo.h"
 #import "mockNSURLSessionDownloadTask.h"
 #import "ELSKEvent.h"
+#import "ELSKArtist.h"
+#import "ELSKLocation.h"
 
 @implementation ELSKUserInfo
 
@@ -21,8 +23,7 @@
         
         for (NSDictionary *event in [results objectForKey:@"event"]) {
             
-            ELSKEvent *eventObject = [[ELSKEvent alloc]init];
-            eventObject = [ELSKEvent initEventFromDictionary:event];
+            ELSKEvent *eventObject = [[ELSKEvent alloc]initEventFromDictionary:event];
             [userCalendarMutableDictionary setValue:eventObject forKey:eventObject.displayName];
             
         }
@@ -32,8 +33,7 @@
         for (NSDictionary *calendarEntryDictionary in [results objectForKey:@"calendarEntry"]) {
             
             NSDictionary *event = [NSDictionary dictionaryWithDictionary:[calendarEntryDictionary objectForKey:@"event"]];
-            ELSKEvent *eventObject = [[ELSKEvent alloc]init];
-            eventObject = [ELSKEvent initEventFromDictionary:event];
+            ELSKEvent *eventObject = [[ELSKEvent alloc]initEventFromDictionary:event];
             [userCalendarMutableDictionary setValue:eventObject forKey:eventObject.displayName];
             [userCalendarMutableDictionary setValue:[calendarEntryDictionary objectForKey:@"reason"] forKey:@"reason"];
             
@@ -53,8 +53,7 @@
         
     for (NSDictionary *artist in [results objectForKey:@"artist"]) {
         
-        ELSKArtist *artistObject = [[ELSKArtist alloc]init];
-        artistObject = [ELSKArtist initArtistFromDictionary:artist];
+        ELSKArtist *artistObject = [[ELSKArtist alloc]initWithContentsOfDictionary:artist];
         [trackingArtistsMutableDictionary setValue:artistObject forKey:artistObject.displayName];
         
     }
@@ -70,11 +69,23 @@
     NSMutableDictionary *trackingMetroAreaMutableDictionary = [[NSMutableDictionary alloc]init];
     ELSKLocation *metroAreaObject = [[ELSKLocation alloc]init];
     metroAreaObject.metroArea = [location objectForKey:@"metroArea"];
-    NSLog(@"%@", metroAreaObject.metroArea);
     [trackingMetroAreaMutableDictionary setValue:metroAreaObject forKey:@"metroArea"];
     NSDictionary *trackingMetroAreaDictionary = [NSDictionary dictionaryWithDictionary:trackingMetroAreaMutableDictionary];
     return trackingMetroAreaDictionary;
     
+}
+
++ (NSDictionary *)setUserGigographyWithDictionary:(NSDictionary *)dictionary {
+
+    NSDictionary *results = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"results"]];
+    NSMutableDictionary *gigographyMutableDictionary = [[NSMutableDictionary alloc] init];
+    for (NSDictionary *event in [results objectForKey:@"event"]) {
+        ELSKEvent *eventObject = [[ELSKEvent alloc] initEventFromDictionary:event];
+        [gigographyMutableDictionary setValue:eventObject forKey:eventObject.displayName];
+    }
+    
+    NSDictionary *gigographyDictionary = [NSDictionary dictionaryWithDictionary:gigographyMutableDictionary];
+    return gigographyDictionary;
 }
 
 @end

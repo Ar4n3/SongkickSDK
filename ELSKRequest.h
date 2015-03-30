@@ -7,13 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SongkickSDK.h"
-#import "mockNSURLSessionDownloadTask.h"
-#import "ELSKArtist.h"
-#import "ELSKEvent.h"
-#import "ELSKVenue.h"
-#import "ELSKLocation.h"
-#import "ELSKUserInfo.h"
 
 typedef NS_ENUM(int, ELSKRequestType)
 {
@@ -35,13 +28,6 @@ typedef NS_ENUM(int, ELSKRequestType)
 static NSString *kAPIKey = nil;
 
 @interface ELSKRequest : NSObject
-
-@property (nonatomic) ELSKArtist *artist;
-@property (nonatomic) NSDictionary *events;
-@property (nonatomic) ELSKVenue *venue;
-@property (nonatomic) ELSKLocation *location;
-@property (nonatomic) NSDictionary *similarArtist;
-@property (nonatomic) ELSKUserInfo *userInfo;
 
 + (void)setAPIKey:(NSString *)apiKey;
 - (ELSKRequest *)GETRequestFor:(int)requestFor withParameters:(NSDictionary *)dictionary;
